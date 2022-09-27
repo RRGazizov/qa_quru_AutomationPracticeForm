@@ -24,10 +24,10 @@ public class AutomationPracticeForm {
         // открываем нужную страницу
         open("/automation-practice-form");
         // проверяем загрузку страницы с помощью проверки наличия заголовка
-        //$("[.practice-form-wrapper]").shouldHave(text("Student Registration Form"));
+        $("[.practice-form-wrapper]").shouldHave(text("Student Registration Form"));
         // удаляем баннеры (вызов скрипта на стороне браузера)
-        //executeAsyncJavaScript("$('footer').remove()");
-      //  executeAsyncJavaScript("$('fixedban').remove()");
+        executeAsyncJavaScript("$('footer').remove()");
+        executeAsyncJavaScript("$('fixedban').remove()");
         // вводим значения
         $("[id=firstName]").setValue("Ivan");         // ввод текстовых значений
         $("[id=lastName]").setValue("Ivanov");        // ввод текстовых значений
